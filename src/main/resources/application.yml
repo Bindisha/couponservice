@@ -4,8 +4,8 @@ spring:
       ddl-auto: update
     database-platform: org.hibernate.dialect.MySQLDialect
   datasource:
-    url: jdbc:mysql://${DB_HOST:3.109.189.129}:${DB_PORT:3306}/${DB_NAME:servicedb}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&connectTimeout=30000&socketTimeout=60000
-    username: ${DB_USER:sachin}
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:servicedb}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&connectTimeout=30000&socketTimeout=60000
+    username: ${DB_USER:bindisha}
     password: ${DB_PASSWORD:password}
 server:
   port: 9091
