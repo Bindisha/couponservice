@@ -13,14 +13,14 @@ services:
     ports:
       - "3306:3306"
     networks:
-      - springboot-mysql-network
+      - my_service_network
     volumes:
       - mysql_data:/var/lib/mysql  
 
   springboot-app:
  #   build: .
     image : bindisha/couponservicerepo:v1
-    container_name: springboot-container
+    container_name: couponservice-container
     ports:
       - "9091:9091"
     environment:
@@ -32,10 +32,10 @@ services:
     depends_on:
       - mysql
     networks:
-      - springboot-mysql-network
+      - my_service_network
 
 networks:
-  springboot-mysql-network:
+  my_service_network:
      external: true
 
 volumes:
