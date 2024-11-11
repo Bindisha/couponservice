@@ -2,10 +2,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
   datasource:
-    url: jdbc:mysql://localhost:3306/servicedb
-    username: root
-    password: pa$$word
+    url: jdbc:mysql://${DB_HOST:3.109.189.129}:${DB_PORT:3306}/${DB_NAME:servicedb}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&connectTimeout=30000&socketTimeout=60000
+    username: ${DB_USER:sachin}
+    password: ${DB_PASSWORD:password}
 server:
   port: 9091
   
