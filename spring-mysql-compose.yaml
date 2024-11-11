@@ -8,10 +8,10 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: servicedb
-      MYSQL_USER: sachin
+      MYSQL_USER: bindisha
       MYSQL_PASSWORD: password
     ports:
-      - "3307:3306"
+      - "3306:3306"
     networks:
       - springboot-mysql-network
     volumes:
@@ -19,15 +19,15 @@ services:
 
   springboot-app:
  #   build: .
-    image : sachingowd07/couponservice:v5
+    image : bindisha/couponservicerepo:v1
     container_name: springboot-container
     ports:
-      - "9091:8080"
+      - "9091:9091"
     environment:
       DB_HOST: mysql-docker
-      DB_PORT: 3307
+      DB_PORT: 3306
       DB_NAME: servicedb
-      DB_USER: sachin
+      DB_USER: bindisha
       DB_PASSWORD: password
     depends_on:
       - mysql
