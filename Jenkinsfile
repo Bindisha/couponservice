@@ -58,8 +58,8 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarQube') {
                     sh """${scannerHome}/bin/sonar-scanner \
-                    -Dsonar.projectKey=FlightService \
-                    -Dsonar.projectName=FlightService \
+                    -Dsonar.projectKey=coupon_service_key \
+                    -Dsonar.projectName=coupon_service \
                     -Dsonar.projectVersion=1.0 \
                     -Dsonar.sources=src/main/java \
                     -Dsonar.tests=src/test/java \
