@@ -71,13 +71,13 @@ pipeline {
             }
         }
         
-        stage('Build Docker Image') {
+/*        stage('Build Docker Image') {
             steps {
                 script {
                     def dockerImage = docker.build("${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO_NAME}:${IMAGE_TAG}")
                 }
             }
-        }
+        }*/
 
         /*stage('Push Docker Image to ECR') {
             steps {
