@@ -64,7 +64,6 @@ pipeline {
                     -Dsonar.projectName=coupon_service \
                     -Dsonar.projectVersion=1.0 \
                     -Dsonar.sources=src/main/java \
-                    -Dsonar.tests=src/test/java \
                     -Dsonar.java.binaries=target/classes \
                     -Dsonar.junit.reportPaths=target/surefire-reports \
                     -Dsonar.jacoco.reportPaths=target/jacoco.exec
